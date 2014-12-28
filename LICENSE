@@ -1,3 +1,45 @@
+ScrollableAnimation [![](http://img.shields.io/badge/iOS-8.0%2B-lightgrey.svg)]()
+=====
+
+ScrollableAnimation was built to mimic the normal way of animating layers with property based CAAnimation defined by a keyPath with the main difference being that the X axis of the animation timeline is an 'offset' instead of 'time'.
+
+### Setup
+
+Just copy ScrollableAnimation folder to your iOS 8 project;
+
+### Usage
+
+Create an animation controller for a particular context.
+
+`
+let animationController = ScrollableAnimationController()
+`
+
+Create an animation and add it to the layer you want to animate. Pass along the animation controller.
+
+```swift
+let animatableView = UIView(frame: CGRectMake(0, 0, 100, 100))
+self.superView.addSubview(animatableView)
+```
+
+```swift
+let rotation = ScrollableKeyframeAnimation(keyPath: "transform.rotation.z")
+        rotation.beginOffset = 0
+        rotation.distance = 600
+rotation.keyOffsets = [0.0, 0.5, 1.0]
+        rotation.values = [0.0, Float(M_PI), 0.0]
+        rotation.functions = [TweenBlockEaseInQuad, TweenBlockEaseInQuad]
+        animatableView.layer.addScrollableAnimation(rotation, forKey: "rotationAnimation", withController: animationController)
+```
+
+### Improvements
+
+- Implement 'additive' functionality for ScrollableAnimation.
+
+- Implement ScrollableAnimationDelegate.
+
+- Optimize contents-based animations with texture atlases.
+
 The MIT License (MIT)
 
 Copyright (c) 2014 Bruno Morgado
