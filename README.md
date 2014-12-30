@@ -1,7 +1,7 @@
 ScrollableAnimation [![](http://img.shields.io/badge/iOS-8.0%2B-lightgrey.svg)]()
 =====
 
-CAPropertyAnimation-like animations written to progress based on an offset instead of time.
+Swift library for creating keyPath animations based on an offset instead of time.
 
 ScrollableAnimation was built to mimic the normal way of animating layers with a property-based CAAnimation defined by a keyPath with the main difference being that the X axis of the animation timeline is an 'offset' instead of 'time'.
 
