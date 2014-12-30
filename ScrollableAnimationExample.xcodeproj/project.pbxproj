@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E746779C1A52C1B200C237AA /* ScrollableAnimationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746779B1A52C1B200C237AA /* ScrollableAnimationControllerTests.swift */; };
 		E74677B21A52D05500C237AA /* BasicImageInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A11A52D05500C237AA /* BasicImageInterpolator.swift */; };
 		E74677B31A52D05500C237AA /* BasicInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A21A52D05500C237AA /* BasicInterpolator.swift */; };
 		E74677B41A52D05500C237AA /* BasicInterpolatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A31A52D05500C237AA /* BasicInterpolatorFactory.swift */; };
@@ -23,6 +22,22 @@
 		E74677BE1A52D05500C237AA /* ScrollableAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677AE1A52D05500C237AA /* ScrollableAnimation.swift */; };
 		E74677BF1A52D05500C237AA /* ScrollableAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677AF1A52D05500C237AA /* ScrollableAnimationController.swift */; };
 		E74677C01A52D05500C237AA /* TweenBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677B11A52D05500C237AA /* TweenBlock.swift */; };
+		E74677C11A52FCEF00C237AA /* ScrollableAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677AF1A52D05500C237AA /* ScrollableAnimationController.swift */; };
+		E74677C51A52FDFB00C237AA /* ScrollableAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677C41A52FDFB00C237AA /* ScrollableAnimationTests.swift */; };
+		E74677C61A52FF4900C237AA /* TweenBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677B11A52D05500C237AA /* TweenBlock.swift */; };
+		E74677C71A52FF5F00C237AA /* ScrollableAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677AE1A52D05500C237AA /* ScrollableAnimation.swift */; };
+		E74677C81A5302EE00C237AA /* BasicImageInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A11A52D05500C237AA /* BasicImageInterpolator.swift */; };
+		E74677C91A5302F100C237AA /* BasicInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A21A52D05500C237AA /* BasicInterpolator.swift */; };
+		E74677CA1A5302F400C237AA /* BasicInterpolatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A31A52D05500C237AA /* BasicInterpolatorFactory.swift */; };
+		E74677CB1A5302F700C237AA /* BasicNumberInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A41A52D05500C237AA /* BasicNumberInterpolator.swift */; };
+		E74677CC1A5302FA00C237AA /* BasicValueInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A51A52D05500C237AA /* BasicValueInterpolator.swift */; };
+		E74677CD1A5302FE00C237AA /* Interpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A61A52D05500C237AA /* Interpolator.swift */; };
+		E74677CE1A53030100C237AA /* InterpolatorAbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A71A52D05500C237AA /* InterpolatorAbstractFactory.swift */; };
+		E74677CF1A53030500C237AA /* KeyframeImageInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A91A52D05500C237AA /* KeyframeImageInterpolator.swift */; };
+		E74677D01A53030900C237AA /* KeyframeInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677AA1A52D05500C237AA /* KeyframeInterpolator.swift */; };
+		E74677D11A53031400C237AA /* KeyframeNumberInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677AC1A52D05500C237AA /* KeyframeNumberInterpolator.swift */; };
+		E74677D21A53031700C237AA /* KeyframeValueInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677AD1A52D05500C237AA /* KeyframeValueInterpolator.swift */; };
+		E74677D31A53032C00C237AA /* KeyframeInterpolatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677AB1A52D05500C237AA /* KeyframeInterpolatorFactory.swift */; };
 		E746AD311A50396200C790B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD301A50396200C790B4 /* AppDelegate.swift */; };
 		E746AD331A50396200C790B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD321A50396200C790B4 /* ViewController.swift */; };
 		E746AD361A50396300C790B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E746AD341A50396300C790B4 /* Main.storyboard */; };
@@ -42,7 +57,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E746779B1A52C1B200C237AA /* ScrollableAnimationControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableAnimationControllerTests.swift; sourceTree = "<group>"; };
 		E74677A11A52D05500C237AA /* BasicImageInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicImageInterpolator.swift; sourceTree = "<group>"; };
 		E74677A21A52D05500C237AA /* BasicInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInterpolator.swift; sourceTree = "<group>"; };
 		E74677A31A52D05500C237AA /* BasicInterpolatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInterpolatorFactory.swift; sourceTree = "<group>"; };
@@ -58,6 +72,7 @@
 		E74677AE1A52D05500C237AA /* ScrollableAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableAnimation.swift; sourceTree = "<group>"; };
 		E74677AF1A52D05500C237AA /* ScrollableAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableAnimationController.swift; sourceTree = "<group>"; };
 		E74677B11A52D05500C237AA /* TweenBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweenBlock.swift; sourceTree = "<group>"; };
+		E74677C41A52FDFB00C237AA /* ScrollableAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableAnimationTests.swift; sourceTree = "<group>"; };
 		E746AD2B1A50396200C790B4 /* ScrollableAnimationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollableAnimationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E746AD2F1A50396200C790B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E746AD301A50396200C790B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +106,7 @@
 		E746779A1A52C18D00C237AA /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				E746779B1A52C1B200C237AA /* ScrollableAnimationControllerTests.swift */,
+				E74677C41A52FDFB00C237AA /* ScrollableAnimationTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -349,7 +364,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				E746AD471A50396600C790B4 /* ScrollableAnimationExampleTests.swift in Sources */,
-				E746779C1A52C1B200C237AA /* ScrollableAnimationControllerTests.swift in Sources */,
+				E74677C61A52FF4900C237AA /* TweenBlock.swift in Sources */,
+				E74677D11A53031400C237AA /* KeyframeNumberInterpolator.swift in Sources */,
+				E74677D01A53030900C237AA /* KeyframeInterpolator.swift in Sources */,
+				E74677C11A52FCEF00C237AA /* ScrollableAnimationController.swift in Sources */,
+				E74677CC1A5302FA00C237AA /* BasicValueInterpolator.swift in Sources */,
+				E74677C71A52FF5F00C237AA /* ScrollableAnimation.swift in Sources */,
+				E74677CF1A53030500C237AA /* KeyframeImageInterpolator.swift in Sources */,
+				E74677CB1A5302F700C237AA /* BasicNumberInterpolator.swift in Sources */,
+				E74677CD1A5302FE00C237AA /* Interpolator.swift in Sources */,
+				E74677D31A53032C00C237AA /* KeyframeInterpolatorFactory.swift in Sources */,
+				E74677C51A52FDFB00C237AA /* ScrollableAnimationTests.swift in Sources */,
+				E74677C91A5302F100C237AA /* BasicInterpolator.swift in Sources */,
+				E74677CE1A53030100C237AA /* InterpolatorAbstractFactory.swift in Sources */,
+				E74677CA1A5302F400C237AA /* BasicInterpolatorFactory.swift in Sources */,
+				E74677D21A53031700C237AA /* KeyframeValueInterpolator.swift in Sources */,
+				E74677C81A5302EE00C237AA /* BasicImageInterpolator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

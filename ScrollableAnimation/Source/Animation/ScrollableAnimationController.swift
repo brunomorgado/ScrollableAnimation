@@ -149,9 +149,10 @@ class ScrollableAnimationController: NSObject {
         for animatableItem in animatables {
             let animationItems = animatableItem.animations
             for animationItem in animationItems {
-                dispatch_async(dispatch_get_main_queue(),{
-                    animationItem.animation.processAnimatable(animatableItem.animatable, forOffset: offset)
-                });
+//                dispatch_async(dispatch_get_main_queue(),{
+//                    animationItem.animation.processAnimatable(animatableItem.animatable, forOffset: offset)
+//                });
+                animationItem.animation.processAnimatable(animatableItem.animatable, forOffset: offset)
             }
         }
         objc_sync_exit(self)

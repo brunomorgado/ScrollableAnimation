@@ -47,11 +47,11 @@ class BasicValueInterpolator: BasicInterpolator {
                     
                     var tween = animation.offsetFunction
                     if let tween = tween as TweenBlock? {
-                        valueX = Float(tween(Double(offsetPercentage))) * Float(verticalDeltaX)
-                        valueY = Float(tween(Double(offsetPercentage))) * Float(verticalDeltaY)
+                        valueX = Float(fromValue.CGPointValue().x) + Float(tween(Double(offsetPercentage))) * Float(verticalDeltaX)
+                        valueY = Float(fromValue.CGPointValue().y) + Float(tween(Double(offsetPercentage))) * Float(verticalDeltaY)
                     } else {
-                        valueX = offsetPercentage * Float(verticalDeltaX)
-                        valueY = offsetPercentage * Float(verticalDeltaY)
+                        valueX = Float(fromValue.CGPointValue().x) + (offsetPercentage * Float(verticalDeltaX))
+                        valueY = Float(fromValue.CGPointValue().y) + offsetPercentage * Float(verticalDeltaY)
                     }
                     point = CGPoint(x: CGFloat(valueX), y: CGFloat(valueY))
                 }
@@ -75,11 +75,11 @@ class BasicValueInterpolator: BasicInterpolator {
                     
                     var tween = animation.offsetFunction
                     if let tween = tween as TweenBlock? {
-                        valueWidth = Float(tween(Double(offsetPercentage))) * Float(verticalDeltaWidth)
-                        valueHeight = Float(tween(Double(offsetPercentage))) * Float(verticalDeltaHeight)
+                        valueWidth = Float(fromValue.CGSizeValue().width) + Float(tween(Double(offsetPercentage))) * Float(verticalDeltaWidth)
+                        valueHeight = Float(fromValue.CGSizeValue().height) + Float(tween(Double(offsetPercentage))) * Float(verticalDeltaHeight)
                     } else {
-                        valueWidth = offsetPercentage * Float(verticalDeltaWidth)
-                        valueHeight = offsetPercentage * Float(verticalDeltaHeight)
+                        valueWidth = Float(fromValue.CGSizeValue().width) + offsetPercentage * Float(verticalDeltaWidth)
+                        valueHeight = Float(fromValue.CGSizeValue().height) + offsetPercentage * Float(verticalDeltaHeight)
                     }
                     size = CGSize(width: CGFloat(valueWidth), height: CGFloat(valueHeight))
                 }
