@@ -69,31 +69,46 @@ class ScrollableAnimationController: NSObject {
     
     func unregisterAllAnimationsForAnimatable(animatable: CALayer) {
         objc_sync_enter(self)
+        var index: Int? = nil
         for animatableItem in animatables {
             if (animatable == animatableItem.animatable) {
                 animatableItem.animations.removeAll(keepCapacity: false)
+                index = find(animatables, animatableItem)
             }
+        }
+        if let index = index {
+            animatables.removeAtIndex(index)
         }
         objc_sync_exit(self)
     }
     
     func unregisterAnimationForAnimatable(animatable: CALayer, forKey key: String!) {
         objc_sync_enter(self)
+        var animatableIndex: Int? = nil
         for animatableItem in animatables {
-            for animationItem in animatableItem.animations {
-                if (animationItem.key == key) {
-                    if let index = find(animatableItem.animations, animationItem) {
-                        animatableItem.animations.removeAtIndex(index)
+            if (animatable == animatableItem.animatable) {
+                for animationItem in animatableItem.animations {
+                    if (animationItem.key == key) {
+                        if let index = find(animatableItem.animations, animationItem) {
+                            animatableItem.animations.removeAtIndex(index)
+                            animatableIndex = find(animatables, animatableItem)
+                        }
                     }
                 }
+            }
+        }
+        if let animatableIndex = animatableIndex {
+            let animatableItem = animatables[animatableIndex]
+            if (animatableItem.animations.isEmpty) {
+                animatables.removeAtIndex(animatableIndex)
             }
         }
         objc_sync_exit(self)
     }
     
     func animationKeysForAnimatable(animatable: CALayer) -> [String]? {
-        var keys = [String]()
         objc_sync_enter(self)
+        var keys = [String]()
         for animatableItem in animatables {
             if (animatableItem.animatable == animatable) {
                 for animationItem in animatableItem.animations {
@@ -112,8 +127,8 @@ class ScrollableAnimationController: NSObject {
     }
     
     func animationForKey(animationKey: String!, forAnimatable animatable: CALayer) -> ScrollableAnimation? {
-        var returnAnimation: ScrollableAnimation? = nil
         objc_sync_enter(self)
+        var returnAnimation: ScrollableAnimation? = nil
         for animatableItem in animatables {
             if (animatableItem.animatable == animatable) {
                 for animationItem in animatableItem.animations {
@@ -134,7 +149,9 @@ class ScrollableAnimationController: NSObject {
         for animatableItem in animatables {
             let animationItems = animatableItem.animations
             for animationItem in animationItems {
-                animationItem.animation.processAnimatable(animatableItem.animatable, forOffset: offset)
+                dispatch_async(dispatch_get_main_queue(),{
+                    animationItem.animation.processAnimatable(animatableItem.animatable, forOffset: offset)
+                });
             }
         }
         objc_sync_exit(self)
