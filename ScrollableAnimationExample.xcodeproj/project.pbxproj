@@ -7,27 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E746779C1A52C1B200C237AA /* ScrollableAnimationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746779B1A52C1B200C237AA /* ScrollableAnimationControllerTests.swift */; };
+		E74677B21A52D05500C237AA /* BasicImageInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A11A52D05500C237AA /* BasicImageInterpolator.swift */; };
+		E74677B31A52D05500C237AA /* BasicInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A21A52D05500C237AA /* BasicInterpolator.swift */; };
+		E74677B41A52D05500C237AA /* BasicInterpolatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A31A52D05500C237AA /* BasicInterpolatorFactory.swift */; };
+		E74677B51A52D05500C237AA /* BasicNumberInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A41A52D05500C237AA /* BasicNumberInterpolator.swift */; };
+		E74677B61A52D05500C237AA /* BasicValueInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A51A52D05500C237AA /* BasicValueInterpolator.swift */; };
+		E74677B71A52D05500C237AA /* Interpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A61A52D05500C237AA /* Interpolator.swift */; };
+		E74677B81A52D05500C237AA /* InterpolatorAbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A71A52D05500C237AA /* InterpolatorAbstractFactory.swift */; };
+		E74677B91A52D05500C237AA /* KeyframeImageInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677A91A52D05500C237AA /* KeyframeImageInterpolator.swift */; };
+		E74677BA1A52D05500C237AA /* KeyframeInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677AA1A52D05500C237AA /* KeyframeInterpolator.swift */; };
+		E74677BB1A52D05500C237AA /* KeyframeInterpolatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677AB1A52D05500C237AA /* KeyframeInterpolatorFactory.swift */; };
+		E74677BC1A52D05500C237AA /* KeyframeNumberInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677AC1A52D05500C237AA /* KeyframeNumberInterpolator.swift */; };
+		E74677BD1A52D05500C237AA /* KeyframeValueInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677AD1A52D05500C237AA /* KeyframeValueInterpolator.swift */; };
+		E74677BE1A52D05500C237AA /* ScrollableAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677AE1A52D05500C237AA /* ScrollableAnimation.swift */; };
+		E74677BF1A52D05500C237AA /* ScrollableAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677AF1A52D05500C237AA /* ScrollableAnimationController.swift */; };
+		E74677C01A52D05500C237AA /* TweenBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74677B11A52D05500C237AA /* TweenBlock.swift */; };
 		E746AD311A50396200C790B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD301A50396200C790B4 /* AppDelegate.swift */; };
 		E746AD331A50396200C790B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD321A50396200C790B4 /* ViewController.swift */; };
 		E746AD361A50396300C790B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E746AD341A50396300C790B4 /* Main.storyboard */; };
 		E746AD381A50396300C790B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E746AD371A50396300C790B4 /* Images.xcassets */; };
 		E746AD3B1A50396300C790B4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E746AD391A50396300C790B4 /* LaunchScreen.xib */; };
 		E746AD471A50396600C790B4 /* ScrollableAnimationExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD461A50396600C790B4 /* ScrollableAnimationExampleTests.swift */; };
-		E746AD651A5039BC00C790B4 /* BasicImageInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD541A5039BC00C790B4 /* BasicImageInterpolator.swift */; };
-		E746AD661A5039BC00C790B4 /* BasicInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD551A5039BC00C790B4 /* BasicInterpolator.swift */; };
-		E746AD671A5039BC00C790B4 /* BasicInterpolatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD561A5039BC00C790B4 /* BasicInterpolatorFactory.swift */; };
-		E746AD681A5039BC00C790B4 /* BasicNumberInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD571A5039BC00C790B4 /* BasicNumberInterpolator.swift */; };
-		E746AD691A5039BC00C790B4 /* BasicValueInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD581A5039BC00C790B4 /* BasicValueInterpolator.swift */; };
-		E746AD6A1A5039BC00C790B4 /* Interpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD591A5039BC00C790B4 /* Interpolator.swift */; };
-		E746AD6B1A5039BC00C790B4 /* InterpolatorAbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD5A1A5039BC00C790B4 /* InterpolatorAbstractFactory.swift */; };
-		E746AD6C1A5039BC00C790B4 /* KeyframeImageInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD5C1A5039BC00C790B4 /* KeyframeImageInterpolator.swift */; };
-		E746AD6D1A5039BC00C790B4 /* KeyframeInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD5D1A5039BC00C790B4 /* KeyframeInterpolator.swift */; };
-		E746AD6E1A5039BC00C790B4 /* KeyframeInterpolatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD5E1A5039BC00C790B4 /* KeyframeInterpolatorFactory.swift */; };
-		E746AD6F1A5039BC00C790B4 /* KeyframeNumberInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD5F1A5039BC00C790B4 /* KeyframeNumberInterpolator.swift */; };
-		E746AD701A5039BC00C790B4 /* KeyframeValueInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD601A5039BC00C790B4 /* KeyframeValueInterpolator.swift */; };
-		E746AD711A5039BC00C790B4 /* ScrollableAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD611A5039BC00C790B4 /* ScrollableAnimation.swift */; };
-		E746AD721A5039BC00C790B4 /* ScrollableAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD621A5039BC00C790B4 /* ScrollableAnimationController.swift */; };
-		E746AD731A5039BC00C790B4 /* TweenBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD641A5039BC00C790B4 /* TweenBlock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E746779B1A52C1B200C237AA /* ScrollableAnimationControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableAnimationControllerTests.swift; sourceTree = "<group>"; };
+		E74677A11A52D05500C237AA /* BasicImageInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicImageInterpolator.swift; sourceTree = "<group>"; };
+		E74677A21A52D05500C237AA /* BasicInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInterpolator.swift; sourceTree = "<group>"; };
+		E74677A31A52D05500C237AA /* BasicInterpolatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInterpolatorFactory.swift; sourceTree = "<group>"; };
+		E74677A41A52D05500C237AA /* BasicNumberInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicNumberInterpolator.swift; sourceTree = "<group>"; };
+		E74677A51A52D05500C237AA /* BasicValueInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicValueInterpolator.swift; sourceTree = "<group>"; };
+		E74677A61A52D05500C237AA /* Interpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpolator.swift; sourceTree = "<group>"; };
+		E74677A71A52D05500C237AA /* InterpolatorAbstractFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterpolatorAbstractFactory.swift; sourceTree = "<group>"; };
+		E74677A91A52D05500C237AA /* KeyframeImageInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeImageInterpolator.swift; sourceTree = "<group>"; };
+		E74677AA1A52D05500C237AA /* KeyframeInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeInterpolator.swift; sourceTree = "<group>"; };
+		E74677AB1A52D05500C237AA /* KeyframeInterpolatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeInterpolatorFactory.swift; sourceTree = "<group>"; };
+		E74677AC1A52D05500C237AA /* KeyframeNumberInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeNumberInterpolator.swift; sourceTree = "<group>"; };
+		E74677AD1A52D05500C237AA /* KeyframeValueInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeValueInterpolator.swift; sourceTree = "<group>"; };
+		E74677AE1A52D05500C237AA /* ScrollableAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableAnimation.swift; sourceTree = "<group>"; };
+		E74677AF1A52D05500C237AA /* ScrollableAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableAnimationController.swift; sourceTree = "<group>"; };
+		E74677B11A52D05500C237AA /* TweenBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweenBlock.swift; sourceTree = "<group>"; };
 		E746AD2B1A50396200C790B4 /* ScrollableAnimationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollableAnimationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E746AD2F1A50396200C790B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E746AD301A50396200C790B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,21 +68,6 @@
 		E746AD401A50396500C790B4 /* ScrollableAnimationExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollableAnimationExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E746AD451A50396600C790B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E746AD461A50396600C790B4 /* ScrollableAnimationExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableAnimationExampleTests.swift; sourceTree = "<group>"; };
-		E746AD541A5039BC00C790B4 /* BasicImageInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicImageInterpolator.swift; sourceTree = "<group>"; };
-		E746AD551A5039BC00C790B4 /* BasicInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInterpolator.swift; sourceTree = "<group>"; };
-		E746AD561A5039BC00C790B4 /* BasicInterpolatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInterpolatorFactory.swift; sourceTree = "<group>"; };
-		E746AD571A5039BC00C790B4 /* BasicNumberInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicNumberInterpolator.swift; sourceTree = "<group>"; };
-		E746AD581A5039BC00C790B4 /* BasicValueInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicValueInterpolator.swift; sourceTree = "<group>"; };
-		E746AD591A5039BC00C790B4 /* Interpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpolator.swift; sourceTree = "<group>"; };
-		E746AD5A1A5039BC00C790B4 /* InterpolatorAbstractFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterpolatorAbstractFactory.swift; sourceTree = "<group>"; };
-		E746AD5C1A5039BC00C790B4 /* KeyframeImageInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeImageInterpolator.swift; sourceTree = "<group>"; };
-		E746AD5D1A5039BC00C790B4 /* KeyframeInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeInterpolator.swift; sourceTree = "<group>"; };
-		E746AD5E1A5039BC00C790B4 /* KeyframeInterpolatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeInterpolatorFactory.swift; sourceTree = "<group>"; };
-		E746AD5F1A5039BC00C790B4 /* KeyframeNumberInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeNumberInterpolator.swift; sourceTree = "<group>"; };
-		E746AD601A5039BC00C790B4 /* KeyframeValueInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeValueInterpolator.swift; sourceTree = "<group>"; };
-		E746AD611A5039BC00C790B4 /* ScrollableAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableAnimation.swift; sourceTree = "<group>"; };
-		E746AD621A5039BC00C790B4 /* ScrollableAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableAnimationController.swift; sourceTree = "<group>"; };
-		E746AD641A5039BC00C790B4 /* TweenBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweenBlock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E746779A1A52C18D00C237AA /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E746779B1A52C1B200C237AA /* ScrollableAnimationControllerTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E746779D1A52D05500C237AA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E746779E1A52D05500C237AA /* Animation */,
+				E74677B01A52D05500C237AA /* Tween */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		E746779E1A52D05500C237AA /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				E746779F1A52D05500C237AA /* Interpolators */,
+				E74677AE1A52D05500C237AA /* ScrollableAnimation.swift */,
+				E74677AF1A52D05500C237AA /* ScrollableAnimationController.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		E746779F1A52D05500C237AA /* Interpolators */ = {
+			isa = PBXGroup;
+			children = (
+				E74677A01A52D05500C237AA /* BasicInterpolator */,
+				E74677A61A52D05500C237AA /* Interpolator.swift */,
+				E74677A71A52D05500C237AA /* InterpolatorAbstractFactory.swift */,
+				E74677A81A52D05500C237AA /* keyframeInterpolator */,
+			);
+			path = Interpolators;
+			sourceTree = "<group>";
+		};
+		E74677A01A52D05500C237AA /* BasicInterpolator */ = {
+			isa = PBXGroup;
+			children = (
+				E74677A11A52D05500C237AA /* BasicImageInterpolator.swift */,
+				E74677A21A52D05500C237AA /* BasicInterpolator.swift */,
+				E74677A31A52D05500C237AA /* BasicInterpolatorFactory.swift */,
+				E74677A41A52D05500C237AA /* BasicNumberInterpolator.swift */,
+				E74677A51A52D05500C237AA /* BasicValueInterpolator.swift */,
+			);
+			path = BasicInterpolator;
+			sourceTree = "<group>";
+		};
+		E74677A81A52D05500C237AA /* keyframeInterpolator */ = {
+			isa = PBXGroup;
+			children = (
+				E74677A91A52D05500C237AA /* KeyframeImageInterpolator.swift */,
+				E74677AA1A52D05500C237AA /* KeyframeInterpolator.swift */,
+				E74677AB1A52D05500C237AA /* KeyframeInterpolatorFactory.swift */,
+				E74677AC1A52D05500C237AA /* KeyframeNumberInterpolator.swift */,
+				E74677AD1A52D05500C237AA /* KeyframeValueInterpolator.swift */,
+			);
+			path = keyframeInterpolator;
+			sourceTree = "<group>";
+		};
+		E74677B01A52D05500C237AA /* Tween */ = {
+			isa = PBXGroup;
+			children = (
+				E74677B11A52D05500C237AA /* TweenBlock.swift */,
+			);
+			path = Tween;
+			sourceTree = "<group>";
+		};
 		E746AD221A50396200C790B4 = {
 			isa = PBXGroup;
 			children = (
@@ -146,63 +218,10 @@
 		E746AD501A5039BC00C790B4 /* ScrollableAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				E746AD511A5039BC00C790B4 /* Animation */,
-				E746AD631A5039BC00C790B4 /* Tween */,
+				E746779D1A52D05500C237AA /* Source */,
+				E746779A1A52C18D00C237AA /* Tests */,
 			);
 			path = ScrollableAnimation;
-			sourceTree = "<group>";
-		};
-		E746AD511A5039BC00C790B4 /* Animation */ = {
-			isa = PBXGroup;
-			children = (
-				E746AD521A5039BC00C790B4 /* Interpolators */,
-				E746AD611A5039BC00C790B4 /* ScrollableAnimation.swift */,
-				E746AD621A5039BC00C790B4 /* ScrollableAnimationController.swift */,
-			);
-			path = Animation;
-			sourceTree = "<group>";
-		};
-		E746AD521A5039BC00C790B4 /* Interpolators */ = {
-			isa = PBXGroup;
-			children = (
-				E746AD531A5039BC00C790B4 /* BasicInterpolator */,
-				E746AD591A5039BC00C790B4 /* Interpolator.swift */,
-				E746AD5A1A5039BC00C790B4 /* InterpolatorAbstractFactory.swift */,
-				E746AD5B1A5039BC00C790B4 /* keyframeInterpolator */,
-			);
-			path = Interpolators;
-			sourceTree = "<group>";
-		};
-		E746AD531A5039BC00C790B4 /* BasicInterpolator */ = {
-			isa = PBXGroup;
-			children = (
-				E746AD541A5039BC00C790B4 /* BasicImageInterpolator.swift */,
-				E746AD551A5039BC00C790B4 /* BasicInterpolator.swift */,
-				E746AD561A5039BC00C790B4 /* BasicInterpolatorFactory.swift */,
-				E746AD571A5039BC00C790B4 /* BasicNumberInterpolator.swift */,
-				E746AD581A5039BC00C790B4 /* BasicValueInterpolator.swift */,
-			);
-			path = BasicInterpolator;
-			sourceTree = "<group>";
-		};
-		E746AD5B1A5039BC00C790B4 /* keyframeInterpolator */ = {
-			isa = PBXGroup;
-			children = (
-				E746AD5C1A5039BC00C790B4 /* KeyframeImageInterpolator.swift */,
-				E746AD5D1A5039BC00C790B4 /* KeyframeInterpolator.swift */,
-				E746AD5E1A5039BC00C790B4 /* KeyframeInterpolatorFactory.swift */,
-				E746AD5F1A5039BC00C790B4 /* KeyframeNumberInterpolator.swift */,
-				E746AD601A5039BC00C790B4 /* KeyframeValueInterpolator.swift */,
-			);
-			path = keyframeInterpolator;
-			sourceTree = "<group>";
-		};
-		E746AD631A5039BC00C790B4 /* Tween */ = {
-			isa = PBXGroup;
-			children = (
-				E746AD641A5039BC00C790B4 /* TweenBlock.swift */,
-			);
-			path = Tween;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,23 +324,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E746AD6B1A5039BC00C790B4 /* InterpolatorAbstractFactory.swift in Sources */,
-				E746AD6E1A5039BC00C790B4 /* KeyframeInterpolatorFactory.swift in Sources */,
-				E746AD6A1A5039BC00C790B4 /* Interpolator.swift in Sources */,
-				E746AD711A5039BC00C790B4 /* ScrollableAnimation.swift in Sources */,
-				E746AD6F1A5039BC00C790B4 /* KeyframeNumberInterpolator.swift in Sources */,
-				E746AD731A5039BC00C790B4 /* TweenBlock.swift in Sources */,
+				E74677B81A52D05500C237AA /* InterpolatorAbstractFactory.swift in Sources */,
+				E74677BB1A52D05500C237AA /* KeyframeInterpolatorFactory.swift in Sources */,
+				E74677B71A52D05500C237AA /* Interpolator.swift in Sources */,
+				E74677BE1A52D05500C237AA /* ScrollableAnimation.swift in Sources */,
+				E74677BC1A52D05500C237AA /* KeyframeNumberInterpolator.swift in Sources */,
+				E74677C01A52D05500C237AA /* TweenBlock.swift in Sources */,
 				E746AD331A50396200C790B4 /* ViewController.swift in Sources */,
-				E746AD691A5039BC00C790B4 /* BasicValueInterpolator.swift in Sources */,
-				E746AD6C1A5039BC00C790B4 /* KeyframeImageInterpolator.swift in Sources */,
+				E74677B61A52D05500C237AA /* BasicValueInterpolator.swift in Sources */,
+				E74677B91A52D05500C237AA /* KeyframeImageInterpolator.swift in Sources */,
 				E746AD311A50396200C790B4 /* AppDelegate.swift in Sources */,
-				E746AD701A5039BC00C790B4 /* KeyframeValueInterpolator.swift in Sources */,
-				E746AD671A5039BC00C790B4 /* BasicInterpolatorFactory.swift in Sources */,
-				E746AD651A5039BC00C790B4 /* BasicImageInterpolator.swift in Sources */,
-				E746AD681A5039BC00C790B4 /* BasicNumberInterpolator.swift in Sources */,
-				E746AD721A5039BC00C790B4 /* ScrollableAnimationController.swift in Sources */,
-				E746AD661A5039BC00C790B4 /* BasicInterpolator.swift in Sources */,
-				E746AD6D1A5039BC00C790B4 /* KeyframeInterpolator.swift in Sources */,
+				E74677BD1A52D05500C237AA /* KeyframeValueInterpolator.swift in Sources */,
+				E74677B41A52D05500C237AA /* BasicInterpolatorFactory.swift in Sources */,
+				E74677B21A52D05500C237AA /* BasicImageInterpolator.swift in Sources */,
+				E74677B51A52D05500C237AA /* BasicNumberInterpolator.swift in Sources */,
+				E74677BF1A52D05500C237AA /* ScrollableAnimationController.swift in Sources */,
+				E74677B31A52D05500C237AA /* BasicInterpolator.swift in Sources */,
+				E74677BA1A52D05500C237AA /* KeyframeInterpolator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E746AD471A50396600C790B4 /* ScrollableAnimationExampleTests.swift in Sources */,
+				E746779C1A52C1B200C237AA /* ScrollableAnimationControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +535,7 @@
 				E746AD4C1A50396600C790B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E746AD4D1A50396600C790B4 /* Build configuration list for PBXNativeTarget "ScrollableAnimationExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +544,7 @@
 				E746AD4F1A50396600C790B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
