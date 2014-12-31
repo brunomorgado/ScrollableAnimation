@@ -49,8 +49,6 @@ func scrollViewDidScroll(scrollView: UIScrollView) {
 
 - Implement 'additive' functionality for ScrollableAnimation.
 
-- Implement ScrollableAnimationDelegate.
-
 - Optimize contents-based animations with texture atlases.
 
 ### License
