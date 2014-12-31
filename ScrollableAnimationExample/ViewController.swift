@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         let controlScrollView = UIScrollView(frame: self.view.frame)
         controlScrollView.backgroundColor = UIColor.clearColor()
         controlScrollView.delegate = self
-        controlScrollView.contentSize = CGSizeMake(controlScrollView.frame.size.width, CGFloat(AnimationDistance) + 480)
+        controlScrollView.contentSize = CGSizeMake(controlScrollView.frame.size.width, CGFloat(AnimationDistance) + 1500)
         self.view.addSubview(controlScrollView)
         
         
@@ -38,6 +38,7 @@ class ViewController: UIViewController {
         self.view.addSubview(animatable)
         
         let rotation = ScrollableKeyframeAnimation(keyPath: "transform.rotation.z")
+        rotation.delegate = self
         rotation.beginOffset = 0
         rotation.distance = AnimationDistance
         
@@ -55,5 +56,15 @@ class ViewController: UIViewController {
 extension ViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(scrollView: UIScrollView) {
         animationController.updateAnimatablesForOffset(Float(scrollView.contentOffset.y))
+    }
+}
+
+extension ViewController: ScrollableAnimationDelegate {
+    func scrollableAnimationDidStart(anim: ScrollableAnimation!) {
+        
+    }
+    
+    func scrollableAnimationDidStop(anim: ScrollableAnimation!) {
+        
     }
 }

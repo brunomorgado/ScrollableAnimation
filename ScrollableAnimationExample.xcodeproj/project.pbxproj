@@ -133,9 +133,9 @@
 		E746779F1A52D05500C237AA /* Interpolators */ = {
 			isa = PBXGroup;
 			children = (
-				E74677A01A52D05500C237AA /* BasicInterpolator */,
 				E74677A61A52D05500C237AA /* Interpolator.swift */,
 				E74677A71A52D05500C237AA /* InterpolatorAbstractFactory.swift */,
+				E74677A01A52D05500C237AA /* BasicInterpolator */,
 				E74677A81A52D05500C237AA /* keyframeInterpolator */,
 			);
 			path = Interpolators;
@@ -144,11 +144,11 @@
 		E74677A01A52D05500C237AA /* BasicInterpolator */ = {
 			isa = PBXGroup;
 			children = (
-				E74677A11A52D05500C237AA /* BasicImageInterpolator.swift */,
 				E74677A21A52D05500C237AA /* BasicInterpolator.swift */,
 				E74677A31A52D05500C237AA /* BasicInterpolatorFactory.swift */,
 				E74677A41A52D05500C237AA /* BasicNumberInterpolator.swift */,
 				E74677A51A52D05500C237AA /* BasicValueInterpolator.swift */,
+				E74677A11A52D05500C237AA /* BasicImageInterpolator.swift */,
 			);
 			path = BasicInterpolator;
 			sourceTree = "<group>";
@@ -156,11 +156,11 @@
 		E74677A81A52D05500C237AA /* keyframeInterpolator */ = {
 			isa = PBXGroup;
 			children = (
-				E74677A91A52D05500C237AA /* KeyframeImageInterpolator.swift */,
 				E74677AA1A52D05500C237AA /* KeyframeInterpolator.swift */,
 				E74677AB1A52D05500C237AA /* KeyframeInterpolatorFactory.swift */,
 				E74677AC1A52D05500C237AA /* KeyframeNumberInterpolator.swift */,
 				E74677AD1A52D05500C237AA /* KeyframeValueInterpolator.swift */,
+				E74677A91A52D05500C237AA /* KeyframeImageInterpolator.swift */,
 			);
 			path = keyframeInterpolator;
 			sourceTree = "<group>";

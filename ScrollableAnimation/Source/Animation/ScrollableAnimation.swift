@@ -25,38 +25,64 @@
 
 import UIKit
 
-protocol ScrollableAnimation {
-    var distance: Float {get set}
-    var beginOffset: Float {get set}
-    var offsetFunction: TweenBlock? {get set}
-    
-    func processAnimatable(animatable: CALayer, forOffset offset: Float)
-}
-
-protocol ScrollablePropertyAnimation: ScrollableAnimation {
-    var keyPath: String {get set}
-//    var additive: Bool {get set} //TODO
-    
-    init(keyPath: String)
-}
-
-class ScrollableBasicAnimation: ScrollablePropertyAnimation {
+class ScrollableAnimation: NSObject {
     var distance: Float
     var beginOffset: Float
     var offsetFunction: TweenBlock?
-    var keyPath: String
-    var additive: Bool
-    var fromValue: NSValue?
-    var toValue: NSValue?
+    var delegate: AnyObject!
+    var isAnimating: Bool
     
-    required init(keyPath: String) {
+    override init() {
         self.beginOffset = 0.0
         self.distance = 0.0
-        self.additive = false
-        self.keyPath = keyPath
+        self.isAnimating = false
+        super.init()
     }
     
     func processAnimatable(animatable: CALayer, forOffset offset: Float) {
+        self.updateStatusForOffset(offset)
+    }
+    
+    // MARK: - Private methods
+    
+    private func updateStatusForOffset(offset: Float) {
+        var offsetPercentage = self.getPercentageForOffset(offset)
+        if (offsetPercentage <= 0 || offsetPercentage >= 1) {
+            if (isAnimating) {
+                delegate?.scrollableAnimationDidStop!(self)
+            }
+            isAnimating = false
+        } else {
+            if (!isAnimating) {
+                delegate?.scrollableAnimationDidStart!(self)
+            }
+            isAnimating = true
+        }
+    }
+    
+    // MARK: - Helper methods
+    
+    private func getPercentageForOffset(offset: Float) -> Float {
+        return (offset - self.beginOffset) / self.distance
+    }
+}
+
+class ScrollablePropertyAnimation: ScrollableAnimation {
+    var keyPath: String
+//    var additive: Bool {get set} //TODO
+    
+    init(keyPath: String) {
+        self.keyPath = keyPath
+        super.init()
+    }
+}
+
+class ScrollableBasicAnimation: ScrollablePropertyAnimation {
+    var fromValue: NSValue?
+    var toValue: NSValue?
+
+    override func processAnimatable(animatable: CALayer, forOffset offset: Float) {
+        super.processAnimatable(animatable, forOffset: offset)
         let interpolatorFactory = InterpolatorAbstractFactory.interpolatorFactoryForType(.BasicInterpolatorFactory)
         let interpolator = interpolatorFactory?.interpolatorForAnimation(self, animatable: animatable)
         if let interpolator = interpolator {
@@ -66,26 +92,12 @@ class ScrollableBasicAnimation: ScrollablePropertyAnimation {
 }
 
 class ScrollableKeyframeAnimation: ScrollablePropertyAnimation {
-    var distance: Float
-    var beginOffset: Float
-    var offsetFunction: TweenBlock?
-    var keyPath: String
-    var additive: Bool
     var keyOffsets = [Float]?()
     var values = [AnyObject]?()
     var functions = [TweenBlock]?()
-    
-    required init(keyPath: String) {
-        self.beginOffset = 0.0
-        self.distance = 0.0
-        self.additive = false
-        self.keyPath = keyPath
-        self.keyOffsets = nil
-        self.values = nil
-        self.functions = nil
-    }
-    
-    func processAnimatable(animatable: CALayer, forOffset offset: Float) {
+
+    override func processAnimatable(animatable: CALayer, forOffset offset: Float) {
+        super.processAnimatable(animatable, forOffset: offset)
         let interpolatorFactory = InterpolatorAbstractFactory.interpolatorFactoryForType(.KeyframeInterpolatorFactory)
         let interpolator = interpolatorFactory?.interpolatorForAnimation(self, animatable: animatable)
         if let interpolator = interpolator {
@@ -95,10 +107,10 @@ class ScrollableKeyframeAnimation: ScrollablePropertyAnimation {
 }
 
 // TODO - implement delegate
-//@objc protocol ScrollableAnimationDelegate {
-//    func scrollableAnimationDidStart(anim: ScrollableAnimation!)
-//    func scrollableAnimationDidStop(anim: ScrollableAnimation!, finished flag: Bool)
-//}
+@objc protocol ScrollableAnimationDelegate {
+    optional func scrollableAnimationDidStart(anim: ScrollableAnimation!)
+    optional func scrollableAnimationDidStop(anim: ScrollableAnimation!)
+}
 
 extension CALayer {
     func addScrollableAnimation(anim: ScrollableAnimation!, forKey key: String!, withController controller: ScrollableAnimationController) {

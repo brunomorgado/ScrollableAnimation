@@ -25,12 +25,12 @@
                   symbolName = "ScrollableAnimationExample.BasicValueInterpolator.(interpolatedPoint in _5BD6DA5669D02B10766AE6BCE1E55362) (ScrollableAnimationExample.BasicValueInterpolator)(Swift.Float, animation : ScrollableAnimationExample.ScrollableBasicAnimation) -&gt; C.CGPoint"
                   moduleName = "ScrollableAnimationExample"
                   urlString = "file:///Users/brunofcmorgado/Documents/GitHub%20Repositories/ScrollableAnimation/ScrollableAnimation/Source/Animation/Interpolators/BasicInterpolator/BasicValueInterpolator.swift"
-                  timestampString = "441655206.334846"
+                  timestampString = "441678608.952204"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "38"
                   endingLineNumber = "38"
-                  offsetFromSymbolStart = "80">
+                  offsetFromSymbolStart = "132">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -39,12 +39,12 @@
                   symbolName = "ScrollableAnimationExampleTests.BasicValueInterpolator.(interpolatedPoint in _3822CB2EA249C295CAD758C3452BCAD9) (ScrollableAnimationExampleTests.BasicValueInterpolator)(Swift.Float, animation : ScrollableAnimationExampleTests.ScrollableBasicAnimation) -&gt; C.CGPoint"
                   moduleName = "ScrollableAnimationExampleTests"
                   urlString = "file:///Users/brunofcmorgado/Documents/GitHub%20Repositories/ScrollableAnimation/ScrollableAnimation/Source/Animation/Interpolators/BasicInterpolator/BasicValueInterpolator.swift"
-                  timestampString = "441655208.098954"
+                  timestampString = "441678610.890298"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "38"
                   endingLineNumber = "38"
-                  offsetFromSymbolStart = "80">
+                  offsetFromSymbolStart = "132">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -71,12 +71,12 @@
                   symbolName = "ScrollableAnimationExample.BasicValueInterpolator.interpolateAnimation (ScrollableAnimationExample.BasicValueInterpolator)(ScrollableAnimationExample.ScrollableAnimation, forAnimatable : ObjectiveC.CALayer, forOffset : Swift.Float) -&gt; ()"
                   moduleName = "ScrollableAnimationExample"
                   urlString = "file:///Users/brunofcmorgado/Documents/GitHub%20Repositories/ScrollableAnimation/ScrollableAnimation/Source/Animation/Interpolators/BasicInterpolator/BasicValueInterpolator.swift"
-                  timestampString = "441655206.336476"
+                  timestampString = "441678608.973626"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "94"
                   endingLineNumber = "94"
-                  offsetFromSymbolStart = "56">
+                  offsetFromSymbolStart = "72">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -85,12 +85,12 @@
                   symbolName = "ScrollableAnimationExampleTests.BasicValueInterpolator.interpolateAnimation (ScrollableAnimationExampleTests.BasicValueInterpolator)(ScrollableAnimationExampleTests.ScrollableAnimation, forAnimatable : ObjectiveC.CALayer, forOffset : Swift.Float) -&gt; ()"
                   moduleName = "ScrollableAnimationExampleTests"
                   urlString = "file:///Users/brunofcmorgado/Documents/GitHub%20Repositories/ScrollableAnimation/ScrollableAnimation/Source/Animation/Interpolators/BasicInterpolator/BasicValueInterpolator.swift"
-                  timestampString = "441655208.099675"
+                  timestampString = "441678610.890757"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "94"
                   endingLineNumber = "94"
-                  offsetFromSymbolStart = "56">
+                  offsetFromSymbolStart = "72">
                </Location>
             </Locations>
          </BreakpointContent>
