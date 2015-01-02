@@ -39,15 +39,22 @@ extension BasicNumberInterpolator: BasicInterpolatorProtocol {
             let offsetPercentage = BasicInterpolator.getPercentageForOffset(offset, animation: animation)
             if let fromValue = animation.fromValue as Float? {
                 if let toValue = animation.toValue as Float? {
-                    var number = animation.fromValue as Float
                     
-                    let verticalDelta = Double(toValue - fromValue)
+                    var number: Float
                     
-                    var tween = animation.offsetFunction
-                    if let tween = tween as TweenBlock? {
-                        number = number + Float(tween(Double(offsetPercentage))) * Float(verticalDelta)
+                    if (offsetPercentage <= 0) {
+                        number = fromValue
+                    } else if (offsetPercentage > 1) {
+                        number = toValue
                     } else {
-                        number = number + Float(offsetPercentage * Float(verticalDelta))
+                        let verticalDelta = Double(toValue - fromValue)
+                        
+                        var tween = animation.offsetFunction
+                        if let tween = tween as TweenBlock? {
+                            number = fromValue + Float(tween(Double(offsetPercentage))) * Float(verticalDelta)
+                        } else {
+                            number = fromValue + Float(offsetPercentage * Float(verticalDelta))
+                        }
                     }
                     self.animatable.setValue(number, forKeyPath: animation.keyPath)
                 }

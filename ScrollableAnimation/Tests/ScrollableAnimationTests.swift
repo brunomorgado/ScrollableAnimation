@@ -28,12 +28,18 @@ class ScrollableAnimationTests: XCTestCase {
         let fromValue = mockAnimatable.layer.position
         let toValue = CGPointMake(mockAnimatable.layer.position.x, mockAnimatable.layer.position.y + CGFloat(animationDistance))
         let animatableExpectedPosition = toValue
+        
+        let completionExpectation = expectationWithDescription("finished")
     
         let translation = self.getMockTranslationFromValue(fromValue, toValue: toValue, withDistance: animationDistance)
         mockAnimatable.layer.addScrollableAnimation(translation, forKey: nil, withController: self.animationController)
-        self.animationController.updateAnimatablesForOffset(animationDistance)
-        
-        XCTAssertEqual(mockAnimatable.layer.position, animatableExpectedPosition)
+        self.animationController.updateAnimatablesForOffset(animationDistance) {
+            XCTAssertEqual(mockAnimatable.layer.position, animatableExpectedPosition)
+            completionExpectation.fulfill()
+        }
+        waitForExpectationsWithTimeout(2, { error in
+            XCTAssertNil(error, "Error")
+        })
     }
     
     func testRemoveAllScrollableAnimations() {
@@ -48,14 +54,14 @@ class ScrollableAnimationTests: XCTestCase {
         
         mockAnimatable.layer.addScrollableAnimation(translation1, forKey: nil, withController: self.animationController)
         mockAnimatable.layer.removeAllScrollableAnimationsWithController(animationController)
-        self.animationController.updateAnimatablesForOffset(animationDistance)
+        self.animationController.updateAnimatablesForOffset(animationDistance, nil)
         
         XCTAssertEqual(mockAnimatable.layer.position, animatableExpectedPosition)
         
         mockAnimatable.layer.addScrollableAnimation(translation1, forKey: nil, withController: self.animationController)
         mockAnimatable.layer.addScrollableAnimation(translation2, forKey: nil, withController: self.animationController)
         mockAnimatable.layer.removeAllScrollableAnimationsWithController(animationController)
-        self.animationController.updateAnimatablesForOffset(animationDistance)
+        self.animationController.updateAnimatablesForOffset(animationDistance, nil)
         
         XCTAssertEqual(mockAnimatable.layer.position, animatableExpectedPosition)
     }
@@ -68,45 +74,42 @@ class ScrollableAnimationTests: XCTestCase {
         let animatableExpectedPosition = fromValue
         let animationKey = "animationKey"
         
+        let completionExpectation = expectationWithDescription("finished")
+        
         let translation1 = self.getMockTranslationFromValue(fromValue, toValue: toValue, withDistance: animationDistance)
         let translation2 = self.getMockTranslationFromValue(fromValue, toValue: toValue, withDistance: animationDistance)
         
         mockAnimatable.layer.addScrollableAnimation(translation1, forKey: animationKey, withController: self.animationController)
         mockAnimatable.layer.removeScrollableAnimationForKey(animationKey, withController: animationController)
-        self.animationController.updateAnimatablesForOffset(animationDistance)
+        self.animationController.updateAnimatablesForOffset(animationDistance, nil)
         
         XCTAssertEqual(mockAnimatable.layer.position, animatableExpectedPosition)
         
         mockAnimatable.layer.addScrollableAnimation(translation1, forKey: animationKey, withController: self.animationController)
         mockAnimatable.layer.addScrollableAnimation(translation2, forKey: nil, withController: self.animationController)
         mockAnimatable.layer.removeScrollableAnimationForKey(animationKey, withController: animationController)
-        self.animationController.updateAnimatablesForOffset(animationDistance)
+        self.animationController.updateAnimatablesForOffset(animationDistance) {
+            XCTAssertEqual(mockAnimatable.layer.position, toValue)
+            completionExpectation.fulfill()
+        }
         
-        XCTAssertEqual(mockAnimatable.layer.position, toValue)
+        waitForExpectationsWithTimeout(2, { error in
+            XCTAssertNil(error, "Error")
+        })
     }
     
-    func testScrollableAnimationKeys() {
+    func testScrollableAnimationForKey() {
         var mockAnimatable = UIView(frame: CGRectMake(0, 0, 100, 100))
         let animationDistance = Float(300)
         let fromValue = mockAnimatable.layer.position
         let toValue = CGPointMake(mockAnimatable.layer.position.x, mockAnimatable.layer.position.y + CGFloat(animationDistance))
-        let animatableExpectedPosition = toValue
-        let keys = ["translation1 Key", "translation2 Key", "translation3 Key"]
+        let animatableExpectedPosition = fromValue
+        let animationKey = "animationKey"
         
-        
-        let translation1 = self.getMockTranslationFromValue(fromValue, toValue: toValue, withDistance: animationDistance)
-        mockAnimatable.layer.addScrollableAnimation(translation1, forKey: keys[0], withController: self.animationController)
-        let translation2 = self.getMockTranslationFromValue(fromValue, toValue: toValue, withDistance: animationDistance)
-        mockAnimatable.layer.addScrollableAnimation(translation2, forKey: keys[1], withController: self.animationController)
-        let translation3 = self.getMockTranslationFromValue(fromValue, toValue: toValue, withDistance: animationDistance)
-        mockAnimatable.layer.addScrollableAnimation(translation3, forKey: keys[2], withController: self.animationController)
-        
-        let animationKeys = mockAnimatable.layer.scrollableAnimationKeysWithController(animationController) as [String]!
-        for key in animationKeys {
-            let index = find(animationKeys, key)
-            XCTAssertEqual(key, keys[index!])
-        }
+        let translation = self.getMockTranslationFromValue(fromValue, toValue: toValue, withDistance: animationDistance)
     }
+    
+    // MARK: - Helper methods
     
     private func getMockTranslationFromValue(fromValue: CGPoint, toValue: CGPoint, withDistance distance: Float) -> ScrollableBasicAnimation {
         let translation = ScrollableBasicAnimation(keyPath: "position")

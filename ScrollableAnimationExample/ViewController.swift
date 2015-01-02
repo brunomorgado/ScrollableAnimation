@@ -33,11 +33,47 @@ class ViewController: UIViewController {
         self.view.addSubview(controlScrollView)
         
         
+//        let animatable = UIView(frame: CGRectMake(0, 0, 100, 100))
+//        animatable.backgroundColor = UIColor.blueColor()
+//        self.view.addSubview(animatable)
+//        
+//        let rotation = ScrollableKeyframeAnimation(keyPath: "transform.rotation.z")
+//        rotation.delegate = self
+//        rotation.beginOffset = 0
+//        rotation.distance = AnimationDistance
+//        
+//        var offsets: [Float] = [0.0, 0.5, 1.0]
+//        var values: [AnyObject] = [0.0, Float(M_PI), 0.0]
+//        var functions: [TweenBlock] = [TweenBlockEaseInQuad, TweenBlockEaseInQuad]
+//        
+//        rotation.keyOffsets = offsets
+//        rotation.values = values
+//        rotation.functions = functions
+//        animatable.layer.addScrollableAnimation(rotation, forKey: "rotation", withController: animationController)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         let animatable = UIView(frame: CGRectMake(0, 0, 100, 100))
         animatable.backgroundColor = UIColor.blueColor()
         self.view.addSubview(animatable)
         
-        let rotation = ScrollableKeyframeAnimation(keyPath: "transform.rotation.z")
+        let rotation = ScrollableKeyframeAnimation(keyPath: "transform.rotation.x")
         rotation.delegate = self
         rotation.beginOffset = 0
         rotation.distance = AnimationDistance
@@ -55,7 +91,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        animationController.updateAnimatablesForOffset(Float(scrollView.contentOffset.y))
+        animationController.updateAnimatablesForOffset(Float(scrollView.contentOffset.y), nil)
     }
 }
 

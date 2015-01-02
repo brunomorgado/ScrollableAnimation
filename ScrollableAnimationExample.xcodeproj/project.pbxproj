@@ -44,6 +44,7 @@
 		E746AD381A50396300C790B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E746AD371A50396300C790B4 /* Images.xcassets */; };
 		E746AD3B1A50396300C790B4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E746AD391A50396300C790B4 /* LaunchScreen.xib */; };
 		E746AD471A50396600C790B4 /* ScrollableAnimationExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746AD461A50396600C790B4 /* ScrollableAnimationExampleTests.swift */; };
+		E7EED7691A55C9470021607F /* InterpolatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EED7681A55C9470021607F /* InterpolatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		E746AD401A50396500C790B4 /* ScrollableAnimationExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollableAnimationExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E746AD451A50396600C790B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E746AD461A50396600C790B4 /* ScrollableAnimationExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableAnimationExampleTests.swift; sourceTree = "<group>"; };
+		E7EED7681A55C9470021607F /* InterpolatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterpolatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				E74677C41A52FDFB00C237AA /* ScrollableAnimationTests.swift */,
+				E7EED7681A55C9470021607F /* InterpolatorTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				E74677CD1A5302FE00C237AA /* Interpolator.swift in Sources */,
 				E74677D31A53032C00C237AA /* KeyframeInterpolatorFactory.swift in Sources */,
 				E74677C51A52FDFB00C237AA /* ScrollableAnimationTests.swift in Sources */,
+				E7EED7691A55C9470021607F /* InterpolatorTests.swift in Sources */,
 				E74677C91A5302F100C237AA /* BasicInterpolator.swift in Sources */,
 				E74677CE1A53030100C237AA /* InterpolatorAbstractFactory.swift in Sources */,
 				E74677CA1A5302F400C237AA /* BasicInterpolatorFactory.swift in Sources */,

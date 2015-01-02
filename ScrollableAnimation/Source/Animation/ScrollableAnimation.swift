@@ -39,8 +39,11 @@ class ScrollableAnimation: NSObject {
         super.init()
     }
     
-    func processAnimatable(animatable: CALayer, forOffset offset: Float) {
+    func processAnimatable(animatable: CALayer, forOffset offset: Float, completion: (() -> ())?) {
         self.updateStatusForOffset(offset)
+        if let completion = completion {
+            completion()
+        }
     }
     
     // MARK: - Private methods
@@ -81,13 +84,13 @@ class ScrollableBasicAnimation: ScrollablePropertyAnimation {
     var fromValue: NSValue?
     var toValue: NSValue?
 
-    override func processAnimatable(animatable: CALayer, forOffset offset: Float) {
-        super.processAnimatable(animatable, forOffset: offset)
+    override func processAnimatable(animatable: CALayer, forOffset offset: Float, completion: (() -> ())?) {
         let interpolatorFactory = InterpolatorAbstractFactory.interpolatorFactoryForType(.BasicInterpolatorFactory)
         let interpolator = interpolatorFactory?.interpolatorForAnimation(self, animatable: animatable)
         if let interpolator = interpolator {
             interpolator.interpolateAnimation(self, forAnimatable: animatable, forOffset: offset)
         }
+        super.processAnimatable(animatable, forOffset: offset, completion)
     }
 }
 
@@ -96,17 +99,16 @@ class ScrollableKeyframeAnimation: ScrollablePropertyAnimation {
     var values = [AnyObject]?()
     var functions = [TweenBlock]?()
 
-    override func processAnimatable(animatable: CALayer, forOffset offset: Float) {
-        super.processAnimatable(animatable, forOffset: offset)
+    override func processAnimatable(animatable: CALayer, forOffset offset: Float, completion: (() -> ())?) {
         let interpolatorFactory = InterpolatorAbstractFactory.interpolatorFactoryForType(.KeyframeInterpolatorFactory)
         let interpolator = interpolatorFactory?.interpolatorForAnimation(self, animatable: animatable)
         if let interpolator = interpolator {
             interpolator.interpolateAnimation(self, forAnimatable: animatable, forOffset: offset)
         }
+        super.processAnimatable(animatable, forOffset: offset, completion)
     }
 }
 
-// TODO - implement delegate
 @objc protocol ScrollableAnimationDelegate {
     optional func scrollableAnimationDidStart(anim: ScrollableAnimation!)
     optional func scrollableAnimationDidStop(anim: ScrollableAnimation!)

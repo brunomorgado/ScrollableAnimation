@@ -39,21 +39,26 @@ class BasicValueInterpolator: BasicInterpolator {
             let offsetPercentage = BasicInterpolator.getPercentageForOffset(offset, animation: animation)
             if let fromValue = animation.fromValue as NSValue? {
                 if let toValue = animation.toValue as NSValue? {
-                    
-                    let verticalDeltaX = Double(toValue.CGPointValue().x - fromValue.CGPointValue().x)
-                    let verticalDeltaY = Double(toValue.CGPointValue().y - fromValue.CGPointValue().y)
-                    var valueX: Float
-                    var valueY: Float
-                    
-                    var tween = animation.offsetFunction
-                    if let tween = tween as TweenBlock? {
-                        valueX = Float(fromValue.CGPointValue().x) + Float(tween(Double(offsetPercentage))) * Float(verticalDeltaX)
-                        valueY = Float(fromValue.CGPointValue().y) + Float(tween(Double(offsetPercentage))) * Float(verticalDeltaY)
+                    if (offsetPercentage <= 0) {
+                        point = fromValue.CGPointValue()
+                    } else if (offsetPercentage > 1) {
+                        point = toValue.CGPointValue()
                     } else {
-                        valueX = Float(fromValue.CGPointValue().x) + (offsetPercentage * Float(verticalDeltaX))
-                        valueY = Float(fromValue.CGPointValue().y) + offsetPercentage * Float(verticalDeltaY)
+                        let verticalDeltaX = Double(toValue.CGPointValue().x - fromValue.CGPointValue().x)
+                        let verticalDeltaY = Double(toValue.CGPointValue().y - fromValue.CGPointValue().y)
+                        var valueX: Float
+                        var valueY: Float
+                        
+                        var tween = animation.offsetFunction
+                        if let tween = tween as TweenBlock? {
+                            valueX = Float(fromValue.CGPointValue().x) + Float(tween(Double(offsetPercentage))) * Float(verticalDeltaX)
+                            valueY = Float(fromValue.CGPointValue().y) + Float(tween(Double(offsetPercentage))) * Float(verticalDeltaY)
+                        } else {
+                            valueX = Float(fromValue.CGPointValue().x) + (offsetPercentage * Float(verticalDeltaX))
+                            valueY = Float(fromValue.CGPointValue().y) + offsetPercentage * Float(verticalDeltaY)
+                        }
+                        point = CGPoint(x: CGFloat(valueX), y: CGFloat(valueY))
                     }
-                    point = CGPoint(x: CGFloat(valueX), y: CGFloat(valueY))
                 }
             }
         }

@@ -144,15 +144,18 @@ class ScrollableAnimationController: NSObject {
         return returnAnimation
     }
     
-    func updateAnimatablesForOffset(offset: Float) {
+    func updateAnimatablesForOffset(offset: Float, completion: (() -> ())?) {
         objc_sync_enter(self)
         for animatableItem in animatables {
             let animationItems = animatableItem.animations
             for animationItem in animationItems {
-//                dispatch_async(dispatch_get_main_queue(),{
-//                    animationItem.animation.processAnimatable(animatableItem.animatable, forOffset: offset)
-//                });
-                animationItem.animation.processAnimatable(animatableItem.animatable, forOffset: offset)
+                dispatch_async(dispatch_get_main_queue(),{
+                    animationItem.animation.processAnimatable(animatableItem.animatable, forOffset: offset) {
+                        if let completion = completion {
+                            completion()
+                        }
+                    }
+                });
             }
         }
         objc_sync_exit(self)
